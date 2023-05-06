@@ -1,0 +1,63 @@
+@import url("./reset.scss");
+
+/* variables */
+
+$base-color: #82968C;
+$light-color: #C9EDDC;
+$dark-color: #6A706E;
+$primary-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$wrapper: 1200px;
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    @extend .flex-center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 0 50px;
+    font-family: $primary-font;
+
+    @media (max-width: 580px) {
+        padding: 0 20px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: $wrapper;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: $dark-color;
+}
+
+.menu {
+    background-color: $base-color;
+
+    ul {
+        @extend .flex-center;
+
+        li {
+            flex-grow: 1;
+            padding: 1rem;
+            color: $light-color;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover,
+            &.active {
+                background-color: $dark-color;
+            }
+        }
+
+        @media(max-width: 580px) {
+            flex-direction: column;
+        }
+    }
+}
