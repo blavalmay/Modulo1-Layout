@@ -40,13 +40,26 @@ body {
     @extend .flex-center;
     height: $box-size;
     border-radius: $box-radius;
+    
+    span {
+        transition: color 0.3s ease;
+    }
+
+    &:hover {
+        span {
+            color: #ffffff;
+        }
+    }
 }
 
 /* violet */
 
 .base-color {
     background-color: $color-violet;
-    color: #ffffff;
+
+    span {
+        color: #ffffff;
+    }
 }
   
 $i: 1;
