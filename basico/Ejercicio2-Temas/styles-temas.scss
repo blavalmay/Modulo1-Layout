@@ -1,0 +1,74 @@
+@import url("./reset.scss");
+@import url("./tema-1.scss");
+
+/* estructura */
+
+$wrapper: 1200px;
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @extend .flex-center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px;
+    font-family: $primary-font;
+
+    @media (max-width: 580px) {
+        padding: 20px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    max-width: $wrapper;
+
+    > div {
+        margin: 20px 0;
+    }
+}
+
+.box {
+    @extend .flex-center;
+    height: 100px;
+    width: 250px;
+    border-radius: $border-radius;
+}
+
+.color-box {
+    @extend .box;
+    color: #ffffff;
+
+    &--base {
+        background-color: $base-color;
+    }
+    &--important {
+        background-color: $important-color;
+    }
+    &--warning {
+        background-color: $warning-color;
+    }
+}
+
+.text-box {
+
+    p {
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    &__secondary {
+        font-family: $secondary-font;
+    }
+}
+
+.shadow-box {
+    @extend .box;
+    box-shadow: $box-shadow;
+}
