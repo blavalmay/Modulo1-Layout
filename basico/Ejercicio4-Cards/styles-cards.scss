@@ -1,0 +1,100 @@
+@import url("./reset.scss");
+
+/* variables */
+
+$font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-color: #333333;
+$main-color: #F38375;
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+/* estructura */
+
+.flex {
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+body {
+    @extend .flex-center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px;
+    font-family: $font-family;
+    color: $font-color;
+
+    @media (max-width: 580px) {
+        padding: 50px 30px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* cards */
+
+.card-item {
+    @extend .flex-column;
+    border: 1px solid $main-color;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 3px 3px 9px 1px rgba(179,179,179,0.57);;
+    
+    &__content {
+        @extend .flex-column;
+        padding: 1rem;
+    }
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    &__text {
+        color: lighten($font-color, 20%);
+    }
+    &__date {
+        margin: 2rem 0 1rem;
+        align-self: flex-end;
+
+        span {
+            color: $main-color;
+        }
+    }
+    button {
+        background-color: $main-color;
+        border: none;
+        padding: 0.75rem;
+        font-size: 1rem;
+        font-family: $font-family;
+        color: $font-color;
+        border-radius: 0.75rem;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            animation: pulse 0.5s;
+        }
+    }
+}
