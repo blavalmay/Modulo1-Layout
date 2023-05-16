@@ -1,0 +1,88 @@
+@import url("./reset.scss");
+
+$primary-font: 'Jost', sans-serif;
+
+$main-color: #141414;
+$color-white: #ffffff;
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    @extend .flex-column;
+    min-height: 100vh;
+    font-family: $primary-font;
+    color: $color-white;
+    background-color: $main-color;
+    padding: 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 1.5rem;
+
+    &, > div {
+        @extend .flex-container;
+    }
+    .header-logo {
+        img {
+            width: 100px;
+        }
+    }
+    .platform-title {
+        margin-left: 1.5rem;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+    .header-buttons {
+        div {
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $main-color;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 4rem;
+
+    .section-title {
+        margin: 2rem 0 1rem;
+        font-size: 1.25rem;
+    }
+
+    section {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0.5rem;
+        align-items: center;
+
+        .item {
+            transition: all 0.3s ease-out;
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

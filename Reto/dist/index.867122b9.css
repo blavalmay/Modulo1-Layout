@@ -1,0 +1,114 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-column, body {
+  flex-direction: column;
+  display: flex;
+}
+
+.flex-container, header, header > div {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+body {
+  min-height: 100vh;
+  color: #fff;
+  background-color: #141414;
+  padding: 1.5rem;
+  font-family: Jost, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 1.5rem;
+}
+
+header .header-logo img {
+  width: 100px;
+}
+
+header .platform-title {
+  margin-left: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+header .header-buttons div {
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 1rem;
+  transition: all .3s;
+}
+
+header .header-buttons div:hover {
+  color: #141414;
+  background-color: #fff;
+}
+
+main {
+  margin-top: 4rem;
+}
+
+main .section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.25rem;
+}
+
+main section {
+  grid-auto-flow: column;
+  align-items: center;
+  gap: .5rem;
+  display: grid;
+}
+
+main section .item {
+  transition: all .3s ease-out;
+}
+
+main section .item:hover {
+  transform: scale(1.15);
+}
+
+main section img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.867122b9.css.map */
